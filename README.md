@@ -1,4 +1,4 @@
-# Report Emailer
+# Report Card Emailer
 
 This repository contains code that allows you to send report emails to parents about their child's academic progress. The code is written in Python and uses the Gmail API to send emails.
 
