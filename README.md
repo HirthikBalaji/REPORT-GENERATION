@@ -1,24 +1,35 @@
-# Sending Report Emails to Parents
+# Report Emailer
+
 This repository contains code that allows you to send report emails to parents about their child's academic progress. The code is written in Python and uses the Gmail API to send emails.
 
-# Installation
-To use this code, you'll need to follow these steps:
+## Features
 
-Clone this repository to your local machine.
+- Generate personalized reports for each student based on their grades and attendance
+- Send emails to parents with the report as an attachment
+- Customize the email subject and message
+- Use a template for the report format
+- Store the student data and parent contacts in CSV files
 
-Install the required packages by running pip install -r requirements.txt.
+## Requirements
 
-Set up a Google Cloud Platform (GCP) project and enable the Gmail API. You can follow the instructions in the Gmail API documentation.
+- Python 3.6 or higher
+- Gmail account with API access enabled
+- Google Cloud Platform project with Gmail API enabled
+- Credentials file for the Gmail API
 
-Download the credentials.json file and save it in the root directory of the repository.
+## Installation
 
-Prepare the report data in a CSV file. The file should have the following columns: name, subject, grade, comments and email address . Each row represents a report for a single student. Save the file in the data directory with the name reports.csv.
+- Clone this repository or download the zip file
+- Install the required packages using pip:
 
-# Usage
-To send report emails to parents, simply run the send_emails.py script:
+```bash
+pip install -r requirements.txt
+```
+- Create a credentials.json file for the Gmail API following this guide: https://developers.google.com/gmail/api/quickstart/python
+- Place the credentials.json file in the same folder as the code
 
-python send_emails.py
-The script will read the report data from the reports.csv file and send an email to each parent using the Gmail API. The email will contain the student's name, subject, grade, and comments.
+## Usage
+- Edit the send_email.py file to set your email address, subject, and message
+- Edit the REPORT_DATA.csv file to add or modify the student data 📈
 
-# Contributing
-If you find any issues or have any suggestions for improvement, feel free to create a pull request or open an issue.
+Run the send_email.py file to send the report emails: 👍
